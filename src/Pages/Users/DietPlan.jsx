@@ -3,8 +3,13 @@ import Navbar from '../../Components/User-components/Navbar';
 import meal3 from '../../assets/User-frontend/meal3.jpg';
 import Footer from '../../Components/User-components/Footer';
 import Diet from '../../Components/User-components/Diet';
+import { useEffect } from 'react';
 
 function DietPlan() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on page load
+  }, []);
   return (
     <div>
       <Navbar iscolor={true} isText={true} />
@@ -36,13 +41,14 @@ function DietPlan() {
         <div className='h-[90vh] flex grid grid-cols-4 ml-8 mt-6'>
          
         
-          <Diet title ={'Day 1'} kcal={'6776 kcal'}/>
-          <Diet title ={'Day 2'} kcal={'6776 kcal'}/>
-          <Diet title ={'Day 3'} kcal={'6776 kcal'}/>
-          <Diet title ={'Day 4'} kcal={'6776 kcal'}/>
-          <Diet title ={'Day 5'} kcal={'6776 kcal'}/>
-          <Diet title ={'Day 6'} kcal={'6776 kcal'}/>
-          <Diet title ={'Day 7'} kcal={'6776 kcal'}/>
+        <Diet title="Day 1" kcal="6776 kcal" dayIndex="Day1" />
+        <Diet title="Day 2" kcal="6776 kcal" dayIndex="Day2" />
+        <Diet title="Day 3" kcal="6776 kcal" dayIndex="Day3" />
+        <Diet title="Day 4" kcal="6776 kcal" dayIndex="Day4" />
+        <Diet title="Day 5" kcal="6776 kcal" dayIndex="Day5" />
+        <Diet title="Day 6" kcal="6776 kcal" dayIndex="Day6" />
+        <Diet title="Day 7" kcal="6776 kcal" dayIndex="Day7" />
+
         </div>
 
 
